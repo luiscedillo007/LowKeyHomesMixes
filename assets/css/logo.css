@@ -1,0 +1,33 @@
+.logo {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px; 
+    color: white;
+    background: linear-gradient(45deg, #000000, #121212);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6), 
+                inset 0 0 10px rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Adjusted for the wider font */
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.3) 50%);
+    transform: rotate(25deg);
+    transition: transform 0.5s;
+}
+
+.logo:hover::before {
+    transform: rotate(0deg);
+}

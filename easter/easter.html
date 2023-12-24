@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Audio Mixing Easter Page</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link rel="icon" type="image/png" href="./assets/img/mixicon.png">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+        rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body style="background-color: black; color: white; justify-content: center; display: grid; padding: 5%;">
+
+    <h1 style="justify-self: center;">hello world</h1>
+    <button id="playButton" style="margin-top: 1%; margin-bottom: 1%;">Play Audio</button>
+    <audio id="myAudio" loop>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <img id="slideshow" src="rwb2a14tetwb1.jpg" alt="" style="height: 700px;">
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', function () {
+            var audio = document.getElementById('myAudio');
+            audio.play().catch(function (error) {
+                console.log("Audio playback failed:", error);
+            });
+        });
+
+        var images = ['rwb2a14tetwb1.jpg', '6vpsg3bjnlna1.jpg.webp', 'vjqmyw90ynxa1.jpg.webp']; // Add your image URLs here
+        var currentIndex = 0;
+
+        setInterval(function () {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            document.getElementById('slideshow').src = images[currentIndex];
+        }, 3000); // Change image every 3000 milliseconds (3 seconds)
+    </script>
+
+</body>
+
+
+</html>

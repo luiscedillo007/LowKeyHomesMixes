@@ -343,5 +343,23 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/js/main.js"></script>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      let pressedKeys = [];
+      const secretCode = 'juanpa';
+
+      document.addEventListener('keydown', (e) => {
+        pressedKeys.push(e.key);
+        pressedKeys.splice(-secretCode.length - 1, pressedKeys.length - secretCode.length);
+
+        if (pressedKeys.join('').includes(secretCode)) {
+          window.location.href = '/easter/easter.html'; // Redirects to a new page
+          // Or you can trigger any other action you want
+        }
+      });
+    });
+  </script>
+
 </body>
+
 </html>

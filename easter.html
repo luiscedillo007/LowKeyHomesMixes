@@ -17,8 +17,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
     <!-- CSS Files -->
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body style="background-color: black; color: white; justify-content: center; display: grid; padding: 5%;">
@@ -26,11 +26,11 @@
     <h1 style="justify-self: center;">hello world</h1>
     <button id="playButton" style="margin-top: 1%; margin-bottom: 1%;">Play Audio</button>
     <audio id="myAudio" loop>
-        <source src="song.mp3" type="audio/mpeg">
+        <source src="./easter/song.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <img id="slideshow" src="rwb2a14tetwb1.jpg" alt="" style="height: 700px;">
+    <img id="slideshow" src="./easter/rwb2a14tetwb1.jpg" alt="" style="height: 700px;">
 
     <script>
         document.getElementById('playButton').addEventListener('click', function () {
@@ -40,7 +40,7 @@
             });
         });
 
-        var images = ['rwb2a14tetwb1.jpg', '6vpsg3bjnlna1.jpg.webp', 'vjqmyw90ynxa1.jpg.webp']; // Add your image URLs here
+        var images = ['./easter/rwb2a14tetwb1.jpg', './easter/6vpsg3bjnlna1.jpg.webp', './easter/vjqmyw90ynxa1.jpg.webp']; // Add your image URLs here
         var currentIndex = 0;
 
         setInterval(function () {
